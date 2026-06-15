@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Crawlers de IA — conteúdo institucional liberado
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://ilarika.com.br/sitemap.xml

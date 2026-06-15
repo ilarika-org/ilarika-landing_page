@@ -1,0 +1,24 @@
+# iLarika
+
+> Sistema completo para bares e restaurantes no Brasil: cardápio digital por QR code na mesa,
+> robô de WhatsApp que atende e registra pedidos sozinho, app do garçom, cozinha (KDS),
+> painel de retirada em TV, marketplace de delivery próprio sem taxa por pedido,
+> rede de entregadores verificados e gestão financeira em tempo real.
+
+## Produtos
+- Pedido na mesa (QR): cliente escaneia, pede e paga no Pix sem instalar nada
+- Robô de WhatsApp: conversa natural, monta o pedido (pizzas meia a meia, açaí montável) e registra direto na cozinha
+- App do Garçom: mapa de mesas, chamadas e lançamento de pedido
+- Marketplace iLarika: clientes encontram restaurantes por cidade, bairro ou prato — sem comissão de terceiros
+- Rede de entregadores: profissionais verificados pela iLarika (documentos, CNH, antecedentes)
+- Gestão: KDS de cozinha, painel de retirada em TV, caixa, fidelidade, relatórios e permissões por função
+
+## Diferenciais
+- Sem taxa por pedido; Pix integrado; funciona em celular, tablet, notebook e TV
+- Rastreamento de entrega ao vivo para o restaurante e para o cliente
+- WhatsApp embutido na gestão; fluxo do robô configurável (ou gerado por IA a partir do cardápio)
+
+## Contato
+- Site: https://ilarika.com.br
+- WhatsApp: +55 27 99807-9104
+- Demonstração gratuita com o seu cardápio
