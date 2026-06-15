@@ -1,8 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iLarika · Sistema completo para bares e restaurantes | Pedidos, WhatsApp, Delivery e Gestão</title>
+
+  <!-- SEO estático (servido no HTML cru — visível a crawlers de IA e a previews de link que NÃO executam JS) -->
+  <meta name="description" content="Do QR na mesa ao delivery com rastreamento ao vivo: cardápio digital, robô de WhatsApp que vende sozinho, app do garçom, cozinha (KDS), caixa e rede de entregadores — tudo num só sistema, sem taxa por pedido.">
+  <meta name="keywords" content="sistema para restaurante, cardápio digital QR code, robô whatsapp restaurante, delivery próprio sem taxa, KDS cozinha, comanda digital, marketplace delivery, gestão de restaurante">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="iLarika Tecnologia LTDA">
+  <meta name="theme-color" content="#A93226">
+  <link rel="canonical" href="https://ilarika.com.br/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Telegram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="iLarika">
+  <meta property="og:title" content="iLarika · Sistema completo para bares e restaurantes">
+  <meta property="og:description" content="QR na mesa, WhatsApp que vende sozinho, delivery com rastreamento, cozinha e caixa em tempo real — sem taxa por pedido.">
+  <meta property="og:url" content="https://ilarika.com.br/">
+  <meta property="og:image" content="https://ilarika.com.br/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="iLarika — sistema completo para bares e restaurantes">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="iLarika · Sistema completo para bares e restaurantes">
+  <meta name="twitter:description" content="QR na mesa, WhatsApp que vende sozinho, delivery com rastreamento e gestão em tempo real.">
+  <meta name="twitter:image" content="https://ilarika.com.br/assets/brand/og-image.png">
+
+  <!-- Dados estruturados (Google rich results + IA): SoftwareApplication, Organization, FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "iLarika",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android, Windows, macOS",
+  "description": "Sistema completo para bares e restaurantes: cardápio QR, robô de WhatsApp, app do garçom, KDS, delivery próprio com rede de entregadores e gestão em tempo real.",
+  "url": "https://ilarika.com.br",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL", "description": "Demonstração gratuita" },
+  "publisher": { "@type": "Organization", "name": "iLarika Tecnologia LTDA", "url": "https://ilarika.com.br" }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "iLarika",
+  "legalName": "iLarika Tecnologia LTDA",
+  "url": "https://ilarika.com.br",
+  "logo": "https://ilarika.com.br/assets/brand/og-image.png",
+  "slogan": "Sua fome, nosso sabor.",
+  "areaServed": "BR",
+  "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": "Portuguese" }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "O iLarika cobra taxa por pedido?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. Diferente dos marketplaces tradicionais, o iLarika não cobra comissão por pedido — você paga só a assinatura mensal do plano e fica com 100% das vendas, inclusive no delivery e no Pix." } },
+    { "@type": "Question", "name": "Como funciona o pedido por QR code na mesa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O cliente escaneia o QR da mesa com a câmera do celular, o cardápio abre direto no navegador (sem instalar app), ele monta o pedido, paga no Pix e acompanha o status. O pedido cai automaticamente na cozinha." } },
+    { "@type": "Question", "name": "O robô de WhatsApp realmente fecha pedidos sozinho?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. O robô conversa de forma natural, mostra o cardápio com fotos e preços, monta pedidos complexos (pizza meia a meia, açaí com tamanho e adicionais) e registra na cozinha — igual a um pedido do site. Um atendente humano pode assumir a conversa a qualquer momento." } },
+    { "@type": "Question", "name": "Preciso ter entregadores próprios?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. Você escolhe o modelo: só entregadores próprios, só a rede iLarika de entregadores verificados (documentos, CNH e antecedentes checados pela plataforma), ou híbrido — se os seus estiverem ocupados, a corrida abre pra rede." } },
+    { "@type": "Question", "name": "Funciona no meu celular ou preciso de equipamento especial?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Funciona no que você já tem: celular e tablet pro salão e entregadores, qualquer computador ou notebook pra gestão, e qualquer TV com navegador pro painel de retirada e pra cozinha." } },
+    { "@type": "Question", "name": "Quanto tempo leva pra começar a usar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No mesmo dia. Você cadastra o cardápio (ou manda uma foto dele que a IA monta tudo, inclusive o fluxo do WhatsApp), imprime os QR codes das mesas e já está vendendo." } }
+  ]
+}
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #faf9f5; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
