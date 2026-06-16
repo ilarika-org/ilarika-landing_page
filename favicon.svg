@@ -1,16 +1,249 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="iLarika">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">iLarika monstrinho animado</title>
+  <desc id="desc">Letra i laranja com pingo mordido e monstrinho laranja fofo saindo por tras, com olhos piscando e migalhas animadas.</desc>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+    <linearGradient id="iGradient" x1="196" y1="58" x2="251" y2="452" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffd34c"/>
-      <stop offset=".5" stop-color="#ff9f2d"/>
+      <stop offset=".38" stop-color="#ff9f2d"/>
       <stop offset="1" stop-color="#f36a18"/>
     </linearGradient>
-    <mask id="dot">
-      <circle cx="256" cy="168" r="50" fill="#fff"/>
-      <circle cx="298" cy="135" r="27" fill="#000"/>
-    </mask>
+    <linearGradient id="iEdge" x1="180" y1="80" x2="288" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c4611b"/>
+      <stop offset="1" stop-color="#a84414"/>
+    </linearGradient>
+    <radialGradient id="monsterGradient" cx="34%" cy="22%" r="82%">
+      <stop offset="0" stop-color="#ffd05a"/>
+      <stop offset=".36" stop-color="#ff9c31"/>
+      <stop offset=".74" stop-color="#f37723"/>
+      <stop offset="1" stop-color="#c74d18"/>
+    </radialGradient>
+    <radialGradient id="cheekGradient" cx="40%" cy="35%" r="66%">
+      <stop offset="0" stop-color="#ffd3bb" stop-opacity=".95"/>
+      <stop offset=".58" stop-color="#ff7165" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#ff5447" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="furLine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbc45"/>
+      <stop offset="1" stop-color="#b74716"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="8" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 .32 0 0 0 0 .11 0 0 0 0 .04 0 0 0 .28 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      #main-shadow {
+        animation: shadow-breathe 3.4s ease-in-out infinite;
+        transform-origin: 250px 452px;
+      }
+
+      #monster {
+        animation: monster-peek 3.4s ease-in-out infinite;
+        transform-origin: 312px 332px;
+      }
+
+      #i-body {
+        animation: i-breathe 3.4s ease-in-out infinite;
+        transform-origin: 226px 314px;
+      }
+
+      #i-dot {
+        animation: dot-wobble 3.4s ease-in-out infinite;
+        transform-origin: 225px 114px;
+      }
+
+      #tufts {
+        animation: tuft-wiggle 3.4s ease-in-out infinite;
+        transform-origin: 322px 198px;
+      }
+
+      #front-arm {
+        animation: hug-squeeze 3.4s ease-in-out infinite;
+        transform-origin: 275px 344px;
+      }
+
+      .eye-open {
+        animation: blink-open 4.6s infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .eye-closed {
+        animation: blink-closed 4.6s infinite;
+        opacity: 0;
+      }
+
+      .pupil {
+        animation: glance 5.2s ease-in-out infinite;
+      }
+
+      .crumb {
+        animation: crumb-float 3.4s ease-out infinite;
+        opacity: 0;
+        transform-origin: center;
+      }
+
+      .crumb.c2 { animation-delay: .12s; }
+      .crumb.c3 { animation-delay: .22s; }
+      .crumb.c4 { animation-delay: .34s; }
+      .crumb.c5 { animation-delay: .48s; }
+
+      .fur-stroke {
+        fill: none;
+        stroke: url(#furLine);
+        stroke-linecap: round;
+        stroke-width: 3.6;
+        opacity: .42;
+      }
+
+      @keyframes monster-peek {
+        0%, 100% { transform: translate(14px, 10px) rotate(1deg); }
+        42% { transform: translate(0, -5px) rotate(-1.6deg); }
+        72% { transform: translate(4px, -1px) rotate(.8deg); }
+      }
+
+      @keyframes i-breathe {
+        0%, 100% { transform: translateY(0) scaleY(1); }
+        42% { transform: translateY(-3px) scaleY(1.008); }
+        72% { transform: translateY(-1px) scaleY(1.003); }
+      }
+
+      @keyframes dot-wobble {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        42% { transform: translateY(-5px) rotate(-4deg); }
+        72% { transform: translateY(-2px) rotate(2deg); }
+      }
+
+      @keyframes hug-squeeze {
+        0%, 100% { transform: rotate(0deg) translateX(0); }
+        42% { transform: rotate(-5deg) translateX(-3px); }
+        72% { transform: rotate(2deg) translateX(-1px); }
+      }
+
+      @keyframes tuft-wiggle {
+        0%, 100% { transform: rotate(0deg); }
+        42% { transform: rotate(5deg); }
+        72% { transform: rotate(-3deg); }
+      }
+
+      @keyframes blink-open {
+        0%, 8%, 11%, 67%, 70%, 100% { transform: scaleY(1); }
+        9.4%, 68.5% { transform: scaleY(.08); }
+      }
+
+      @keyframes blink-closed {
+        0%, 8%, 11%, 67%, 70%, 100% { opacity: 0; }
+        9.4%, 68.5% { opacity: 1; }
+      }
+
+      @keyframes glance {
+        0%, 32%, 100% { transform: translateX(0); }
+        46%, 62% { transform: translateX(4px); }
+        78%, 88% { transform: translateX(-3px); }
+      }
+
+      @keyframes crumb-float {
+        0%, 28% { opacity: 0; transform: translate(0, 0) scale(.55); }
+        42% { opacity: 1; transform: translate(var(--tx), var(--ty)) scale(1); }
+        68% { opacity: .5; transform: translate(calc(var(--tx) * 1.4), calc(var(--ty) * 1.25 - 4px)) scale(.82); }
+        86%, 100% { opacity: 0; transform: translate(calc(var(--tx) * 1.8), calc(var(--ty) * 1.6 - 8px)) scale(.45); }
+      }
+
+      @keyframes shadow-breathe {
+        0%, 100% { transform: scaleX(1); opacity: .35; }
+        42% { transform: scaleX(.9); opacity: .22; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: .001ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
   </defs>
-  <rect width="512" height="512" rx="118" fill="url(#g)"/>
-  <rect x="218" y="232" width="76" height="162" rx="38" fill="#fff8ed"/>
-  <circle cx="256" cy="168" r="50" fill="#fff8ed" mask="url(#dot)"/>
+
+  <ellipse id="main-shadow" cx="256" cy="455" rx="92" ry="18" fill="#763018" opacity=".35"/>
+
+  <g filter="url(#softShadow)">
+    <g id="i-dot">
+      <g transform="translate(140 35) scale(2.5)">
+        <path d="M 29.0 9.0 C 30.0 8.7, 34.7 8.7, 35.0 9.0 C 35.3 9.3, 33.8 13.5, 34.0 14.0 C 34.2 14.5, 37.8 17.4, 38.0 18.0 C 38.2 18.6, 37.8 23.5, 38.0 24.0 C 38.2 24.5, 40.5 26.8, 41.0 27.0 C 41.5 27.2, 46.7 27.8, 47.0 28.0 C 47.3 28.2, 46.7 29.7, 47.0 30.0 C 47.3 30.3, 51.4 33.8, 52.0 34.0 C 52.6 34.2, 57.7 32.5, 58.0 33.0 C 58.3 33.5, 57.5 41.0, 57.0 42.0 C 56.5 43.0, 49.6 49.5, 49.0 50.0 C 48.4 50.5, 46.2 50.2, 46.0 50.0 C 45.8 49.8, 45.3 46.3, 45.0 46.0 C 44.7 45.7, 40.4 44.9, 40.0 45.0 C 39.6 45.1, 38.2 46.5, 38.0 47.0 C 37.8 47.5, 37.3 52.6, 37.0 53.0 C 36.7 53.4, 33.3 54.3, 33.0 54.0 C 32.7 53.7, 31.3 48.5, 31.0 48.0 C 30.7 47.5, 28.4 45.1, 28.0 45.0 C 27.6 44.9, 24.4 45.7, 24.0 46.0 C 23.6 46.3, 21.7 51.2, 21.0 51.0 C 20.3 50.8, 12.6 43.0, 12.0 42.0 C 11.4 41.0, 9.9 34.2, 10.0 33.0 C 10.1 31.8, 12.5 21.0, 13.0 20.0 C 13.5 19.0, 17.7 16.3, 18.0 16.0 C 18.3 15.7, 17.4 14.4, 18.0 14.0 C 18.6 13.6, 28.0 9.3, 29.0 9.0 Z" fill="url(#iGradient)" stroke="url(#iEdge)" stroke-width="2.7" stroke-linejoin="round"/>
+        <path d="M 29.0 9.0 C 30.0 8.7, 34.7 8.7, 35.0 9.0 C 35.3 9.3, 33.8 13.5, 34.0 14.0 C 34.2 14.5, 37.8 17.4, 38.0 18.0 C 38.2 18.6, 37.8 23.5, 38.0 24.0 C 38.2 24.5, 40.5 26.8, 41.0 27.0 C 41.5 27.2, 46.7 27.8, 47.0 28.0 C 47.3 28.2, 46.7 29.7, 47.0 30.0 C 47.3 30.3, 51.4 33.8, 52.0 34.0 C 52.6 34.2, 57.7 32.5, 58.0 33.0 C 58.3 33.5, 57.5 41.0, 57.0 42.0 C 56.5 43.0, 49.6 49.5, 49.0 50.0 C 48.4 50.5, 46.2 50.2, 46.0 50.0 C 45.8 49.8, 45.3 46.3, 45.0 46.0 C 44.7 45.7, 40.4 44.9, 40.0 45.0 C 39.6 45.1, 38.2 46.5, 38.0 47.0 C 37.8 47.5, 37.3 52.6, 37.0 53.0 C 36.7 53.4, 33.3 54.3, 33.0 54.0 C 32.7 53.7, 31.3 48.5, 31.0 48.0 C 30.7 47.5, 28.4 45.1, 28.0 45.0 C 27.6 44.9, 24.4 45.7, 24.0 46.0 C 23.6 46.3, 21.7 51.2, 21.0 51.0 C 20.3 50.8, 12.6 43.0, 12.0 42.0 C 11.4 41.0, 9.9 34.2, 10.0 33.0 C 10.1 31.8, 12.5 21.0, 13.0 20.0 C 13.5 19.0, 17.7 16.3, 18.0 16.0 C 18.3 15.7, 17.4 14.4, 18.0 14.0 C 18.6 13.6, 28.0 9.3, 29.0 9.0 Z" fill="#ffd35a" opacity=".22"/>
+      </g>
+    </g>
+
+    <g id="monster">
+      <path d="M298 198c22-8 49-3 70 15 28 24 39 64 31 111-8 52-39 96-78 110-42 15-81-5-93-47-13-46 3-113 36-152 8-9 19-24 34-37Z" fill="url(#monsterGradient)" stroke="#b84b18" stroke-width="4"/>
+      <g id="tufts">
+        <path d="M284 211c7-18 24-25 48-21-12 12-25 19-48 21Z" fill="#f36b1e"/>
+        <path d="M303 199c11-18 31-22 58-11-16 11-33 16-58 11Z" fill="#ff9e30"/>
+        <path d="M325 198c18-14 40-12 65 6-20 8-40 8-65-6Z" fill="#ffb23a"/>
+        <path d="M349 210c21-7 40 2 56 24-20 1-38-7-56-24Z" fill="#f68023"/>
+      </g>
+
+      <path class="fur-stroke" d="M387 251c19 25 25 54 18 88"/>
+      <path class="fur-stroke" d="M394 338c-10 34-28 59-55 75"/>
+      <path class="fur-stroke" d="M261 283c-14 29-18 60-12 93"/>
+      <path class="fur-stroke" d="M271 397c18 22 39 32 64 31"/>
+
+      <g id="eyes">
+        <g transform="rotate(-14 293 277)">
+          <ellipse class="eye-open" cx="293" cy="277" rx="25" ry="31" fill="#fff8ed"/>
+          <ellipse class="eye-open" cx="300" cy="284" rx="14" ry="19" fill="#6a2815"/>
+          <ellipse class="pupil" cx="302" cy="286" rx="8" ry="12" fill="#25100b"/>
+          <circle cx="294" cy="272" r="5" fill="#fff"/>
+          <circle cx="304" cy="292" r="2.4" fill="#fff4dc"/>
+          <path class="eye-closed" d="M273 278c13 10 29 11 45 1" fill="none" stroke="#43150c" stroke-width="5" stroke-linecap="round"/>
+        </g>
+        <g transform="rotate(18 349 291)">
+          <ellipse class="eye-open" cx="349" cy="291" rx="25" ry="31" fill="#fff8ed"/>
+          <ellipse class="eye-open" cx="342" cy="298" rx="14" ry="19" fill="#6a2815"/>
+          <ellipse class="pupil" cx="340" cy="300" rx="8" ry="12" fill="#25100b"/>
+          <circle cx="334" cy="286" r="5" fill="#fff"/>
+          <circle cx="344" cy="306" r="2.4" fill="#fff4dc"/>
+          <path class="eye-closed" d="M329 292c13 10 29 11 45 1" fill="none" stroke="#43150c" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </g>
+
+      <path d="M286 254c8-8 25-7 32 2 4 5 2 12-5 12-12 0-23-3-29-7-4-3-2-5 2-7Z" fill="#9d2b13"/>
+      <path d="M354 265c9-4 23 2 28 13 3 7-4 12-11 9-12-5-20-12-23-17-2-4 1-5 6-5Z" fill="#9d2b13"/>
+
+      <ellipse cx="284" cy="319" rx="22" ry="17" fill="url(#cheekGradient)"/>
+      <ellipse cx="365" cy="332" rx="25" ry="19" fill="url(#cheekGradient)"/>
+      <path d="M289 333c8 20 37 29 57 10" fill="none" stroke="#4c150b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M293 331c3 10 11 12 16 2" fill="#fff8ed"/>
+      <path d="M333 346c1 11 9 14 15 5" fill="#fff8ed"/>
+      <path d="M314 352c9 7 22 6 30-2" fill="none" stroke="#ffb092" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+
+      <path d="M306 427c2 20 17 30 36 26 16-3 17-23 3-33-15-11-36-8-39 7Z" fill="#e9681f" stroke="#ad4217" stroke-width="3"/>
+      <path d="M320 445c8 4 16 4 24-1" fill="none" stroke="#933115" stroke-width="3.5" stroke-linecap="round" opacity=".65"/>
+    </g>
+
+    <g id="i-body">
+      <g transform="translate(140 35) scale(2.5)">
+        <path d="M 29.0 62.0 C 30.0 61.8, 37.9 61.8, 39.0 62.0 C 40.1 62.2, 47.2 64.5, 48.0 65.0 C 48.8 65.5, 52.6 70.2, 53.0 71.0 C 53.4 71.8, 55.0 78.7, 55.0 80.0 C 55.0 81.3, 53.1 91.8, 53.0 94.0 C 52.9 96.2, 52.8 116.7, 53.0 119.0 C 53.2 121.3, 55.8 133.4, 56.0 135.0 C 56.2 136.6, 56.2 145.9, 56.0 147.0 C 55.8 148.1, 52.3 154.5, 52.0 155.0 C 51.7 155.5, 50.1 154.9, 50.0 155.0 C 49.9 155.1, 50.6 156.7, 50.0 157.0 C 49.4 157.3, 41.2 160.8, 40.0 161.0 C 38.8 161.2, 29.1 161.2, 28.0 161.0 C 26.9 160.8, 20.7 158.4, 20.0 158.0 C 19.3 157.6, 16.4 154.6, 16.0 154.0 C 15.6 153.4, 13.2 148.1, 13.0 147.0 C 12.8 145.9, 12.8 136.5, 13.0 135.0 C 13.2 133.5, 15.8 123.5, 16.0 121.0 C 16.2 118.5, 16.1 93.3, 16.0 91.0 C 15.9 88.7, 13.9 82.3, 14.0 81.0 C 14.1 79.7, 17.6 68.9, 18.0 68.0 C 18.4 67.1, 20.4 65.3, 21.0 65.0 C 21.6 64.7, 28.0 62.2, 29.0 62.0 Z" fill="url(#iGradient)" stroke="url(#iEdge)" stroke-width="2.8" stroke-linejoin="round"/>
+        <path d="M 22 71 C 18.2 82, 18.7 139.8, 21.4 150.6" fill="none" stroke="#ffd65a" stroke-width="2.8" stroke-linecap="round" opacity=".34"/>
+      </g>
+    </g>
+
+    <g id="front-arm">
+      <path d="M282 356c-28-2-44-20-36-39 8-20 36-18 54-4 17 13 35 20 55 18 16-2 25 15 15 29-18 25-55 31-88-4Z" fill="#ed711f" stroke="#b84818" stroke-width="4"/>
+      <path d="M253 334c14 13 29 17 46 10" fill="none" stroke="#ffad48" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+      <path d="M245 327c10 8 21 9 34 3" fill="none" stroke="#9c3616" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+      <path d="M248 344c10 8 21 9 34 3" fill="none" stroke="#9c3616" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+    </g>
+  </g>
+
+  <g id="crumbs" fill="#f47b1d">
+    <circle class="crumb c1" style="--tx: 25px; --ty: -18px;" cx="386" cy="263" r="6"/>
+    <circle class="crumb c2" style="--tx: 44px; --ty: -24px;" cx="408" cy="259" r="4.5"/>
+    <circle class="crumb c3" style="--tx: 33px; --ty: 14px;" cx="391" cy="298" r="5"/>
+    <circle class="crumb c4" style="--tx: 58px; --ty: 5px;" cx="423" cy="288" r="3"/>
+    <circle class="crumb c5" style="--tx: 41px; --ty: 35px;" cx="405" cy="326" r="3.5"/>
+  </g>
 </svg>
