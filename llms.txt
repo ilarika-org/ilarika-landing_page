@@ -19,6 +19,6 @@
 - WhatsApp embutido na gestão; fluxo do robô configurável (ou gerado por IA a partir do cardápio)
 
 ## Contato
-- Site: https://ilarika.com.br
+- Site: https://parceiros.ilarika.com.br
 - WhatsApp: +55 27 99807-9104
 - Demonstração gratuita com o seu cardápio
